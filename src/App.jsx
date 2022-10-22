@@ -7,14 +7,17 @@ import Home from './pages/Home'
 import ProtectedRoutes from './pages/ProtectedRoutes'
 import ProductId from './pages/ProductId'
 
-function App() {
- 
 
+import LoginScreem from './pages/LoginScreem'
+
+
+function App() {
   return (
     <div className="App">
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/product/:id' element={<ProductId />}/>
+        <Route path='/login' element={<LoginScreem />}/>
         <Route element={<ProtectedRoutes />}>
               <Route path='/cart' element={<Cart />}/>
               <Route path='/purchases' element={<Purchases />} />

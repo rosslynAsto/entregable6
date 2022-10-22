@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import './styles/cardProduct.css'
 
 const CardProducts = ({product}) => {
 const navigate = useNavigate()
@@ -12,7 +13,7 @@ const handleAddCart = (e)=>{
   return (
     <article onClick={handleNavigation} className='product'>
         <header className='product__header'>
-            <img src={product.productImgs[0]} alt="" />
+            <img className='product__img' src={product.productImgs[0]} alt="" />
 
         </header>
         <div className='product__body'>
