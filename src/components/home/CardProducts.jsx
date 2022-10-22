@@ -22,10 +22,11 @@ const handleAddCart = (e)=>{
                 <p className='product__price-label'>Price</p>
                 <p className='product__price-number'>{product.price}</p>
             </div>
-            <div className='product__icon-contaiiner'>
-                <i className='product__icon fa-solid fa-cart-shopping'></i>
-            </div>
-            <button onClick={handleAddCart} className='product__btn'>Show More Info</button>
+           
+            <button onClick={handleAddCart} 
+                    className='product__icon-container'>
+                <i  className='product__icon fa-solid fa-cart-shopping'></i>
+            </button>
            
         </div>
 

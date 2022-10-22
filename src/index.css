@@ -4,6 +4,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+:root{
+   ---bg-color-red: #F85555;
+}
 html{
     font-family: 'Poppins', sans-serif;
 }

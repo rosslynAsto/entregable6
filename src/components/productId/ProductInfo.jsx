@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react'
+import './styles/productInfo.css'
 
 const ProductInfo = ({product}) => {
     const [counter, setCounter] = useState(1)
