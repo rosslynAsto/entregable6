@@ -1,14 +1,32 @@
+import axios from 'axios'
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import {getAllProductsCart} from '../../store/slices/cart.slice'
+import getConfig from '../../utils/getConfig'
 import './styles/cardProduct.css'
 
 const CardProducts = ({product}) => {
+
 const navigate = useNavigate()
+const dispatch = useDispatch()
+
 const handleNavigation = () =>{
     navigate(`/product/${product.id}`)
 }
 const handleAddCart = (e)=>{
     e.stopPropagation()
+    const URL='https://ecommerce-api-react.herokuapp.com/api/v1/cart'
+    const data = {
+        id : product.id,
+        quantity: 1
+    }
+    axios.post(URL, data, getConfig())
+      .then(res => {
+        console.log(res.data)
+        dispatch(getAllProductsCart())
+      })
+      .catch(err => console.log(err))
 }
   return (
     <article onClick={handleNavigation} className='product'>
