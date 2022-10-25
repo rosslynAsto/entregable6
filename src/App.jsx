@@ -9,15 +9,18 @@ import ProductId from './pages/ProductId'
 
 
 import LoginScreem from './pages/LoginScreem'
+import Header from './components/shared/Header'
 
 
 function App() {
   return (
     <div className="App">
+      <Header />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/product/:id' element={<ProductId />}/>
         <Route path='/login' element={<LoginScreem />}/>
+        
         <Route element={<ProtectedRoutes />}>
               <Route path='/cart' element={<Cart />}/>
               <Route path='/purchases' element={<Purchases />} />

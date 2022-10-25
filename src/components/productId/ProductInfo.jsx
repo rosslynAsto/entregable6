@@ -16,7 +16,10 @@ const ProductInfo = ({product}) => {
   return (
     <article className='product-info'>
         <h2 className='product-info__title'>{product?.title}</h2>
+        <div className='product-info__div'> 
         <p className='product-info__description'>{product?.description}</p>
+        </div>
+       
         <footer className='product-info__footer'>
             <div className='product-info__price-container'>
                 <h3 className='product-info__price-label'>Price</h3>

@@ -9,11 +9,17 @@
     padding: .4em .8em;
     text-align: center;
 }
+.product-info__div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .product-info__description{
     font-size: .9rem;
     text-align: justify;
     line-height: 1.8;
     padding: .8em;
+    max-width: 900px;
 }
 .product-info__footer{
     display: grid;
@@ -81,6 +87,7 @@
     transition: filter 100ms ease;
     width: 90%;
     border-radius: 5px;
+    max-width: 700px;
 }
 .product-info__btn:hover{
     filter: brightness(1.1);
