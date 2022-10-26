@@ -1,0 +1,10 @@
+.card-p__btn{
+    background-color: var(---bg-color-red);
+    
+    cursor: pointer;
+}
+.cart-p__icon{
+    font-size: 2em;
+    color: white;
+   
+}
